@@ -372,6 +372,276 @@ C++11 新标准规定，函数可以返回花括号包围的值的列表。类�
 
 因为数组不能被拷贝，所以函数不能返回数组。不过，函数可以返回数组的指针或引用。
 
+# 复合类型
+
+**复合类型（compound type）**是指基于其他类型定义的类型。C++语言有几种复合类型，这里将介绍两种：引用和指针。
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-35.png)
+
+# 引用
+
+**引用（reference）**为对象起了另外一个名字，引用类型引用（refers to）另外一种类型。通过将声明符写成 **&d** 的形式来定义引用类型，其中 **d** 是声明的变量名：
+
+```c++
+int ival = 1024;
+int &refval = ival;  // refval 指向 ival（是 ival 的另一个名字）
+int &refval2;        // 报错: 引用必须被初始化
+```
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-36.png)
+
+## 引用即别名
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-37.png)
+
+```c++
+refval = 2;        // 把 2 赋给 refval 指向的对象, 此处即是赋给了 ival
+int ii = refval;   // 与 ii = ival 执行结果一样
+```
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-38.png)
+
+```c++
+// 正确: refval3 绑定到了那个与 refval 绑定的对象上, 这里就是绑定到 ival 上
+int &refval3 = refval;
+// 利用与 refval 绑定的对象的值初始值变量 i
+int i = refval;
+```
+
+因为引用本身不是一个对象，所以不能定义引用的引用。
+
+## 引用的定义
+
+允许在一条语句中定义多个引用，其中每个引用标识符都必须以符号 **&** 开头：
+
+```c++
+int i1 = 1024, i2 = 2048;  // i1 和 i2 都是 int
+int &r = i1, r2 = i2;      // r 是一个引用, 与 i1 绑定到一起, r2 是 int
+int i3 = 1024, &ri = i3;  // i3 是 int, ri 是一个引用, 与 i3 绑定到一起
+int &r3 = i3, &r4 = i2;   // r3 和 r4 都是引用
+```
+
+所有引用的类型都要和与之绑定的对象严格匹配。而且，引用只能绑定在对象上，而不能与字面值或者某个表达式的计算结果绑定在一起。
+
+```c++
+int &refval4 = 10;    // 错误: 引用类型的初始值必须是一个对象
+double dval = 3.14;
+int &refval5 = dval;  // 错误: 此处引用类型的初始值必须是 int 型对象
+```
+
+# 指针
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-39.png)
+
+```c++
+int *ip1, *ip2;      // ip1 和 ip2 都是指向 int 型对象的指针
+double dp, *dp2;     // dp2 是指向 double 型对象的指针, dp 是 double 型对象
+```
+
+## 获取对象的地址
+
+指针存放某个对象的地址，要想获取该地址，需要使用**取地址符（操作符 & ）**：
+
+```c++
+int ival = 42;
+int *p = &ival;     // p 存放变量 ival 的地址, 或者说 p 是指向变量 ival 的指针
+```
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-40.png)
+
+所有指针的类型都要和它所指向的对象严格匹配：
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-41.png)
+
+## 指针值
+
+指针的值（即地址）应属下列 4 种状态之一：
+
+1. 指向一个对象。
+2. 指向紧邻对象所占空间的下一个位置。
+3. 空指针，意味着指针没有指向任何对象。
+4. 无效指针，也就是上述情况之外的其他值。
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-42.png)
+
+## 利用指针访问对象
+
+如果指针指向了一个对象，则允许使用**解引用符（操作符 * ）**来访问该对象：
+
+```c++
+int ival = 42;
+int *p = &ival;
+cout << *p;
+```
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-43.png)
+
+## 空指针
+
+**空指针（null pointer）**不指向任何对象，在试图使用一个指针之前代码可以首先检查它是否为空。以下列出几个生成空指针的方法：
+
+```c++
+int *p1 = nullptr;
+int *p2 = 0;
+int *p3 = NULL;
+```
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-44.png)
+
+## 赋值和指针
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-45.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-46.png)
+
+## 其他指针操作
+
+只要指针拥有一个合法值，就能将它用在条件表达式中。和采用算术值作为条件遵循的规则类似，如果指针的值是 0，条件取 false：
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-47.png)
+
+## viod* 指针
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-48.png)
+
+概括来说，以 **void*** 的视角来看内存空间也就仅仅是内存空间，没办法访问内存空间中所存的对象。
+
+# 理解复合类型的声明
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-49.png)
+
+## 定义多个变量
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-50.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-51.png)
+
+## 指向指针的指针
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-52.png)
+
+## 指向指针的引用
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-53.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-54.png)
+
+# const 限定符
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-55.png)
+
+## 初始化和 const
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-56.png)
+
+## 默认情况下，const 对象仅在文件内有效
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-57.png)
+
+# const 的引用
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-58.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-59.png)
+
+## 对 const 的引用可能引用一个并非 const 的对象
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-60.png)
+
+# 指针和 const
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-61.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-62.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-63.png)
+
+## const 指针
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-64.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-65.png)
+
+# 顶层 const
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-66.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-67.png)
+
+# constexpr 和常量表达式
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-68.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-69.png)
+
+## constexpr 变量
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-70.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-71.png)
+
+## 字面值类型
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-72.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-73.png)
+
+## 指针和 constexpr
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-74.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-75.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-76.png)
+
+# 处理类型
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-77.png)
+
+# 类型别名
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-78.png)
+
+其中，关键字 typedef 作为声明语句中的基本数据类型的一部分出现。含有 typedef 的声明语句定义的不再是变量而是类型别名。和以前的声明语句一样，这里的声明符也可以包含类型修饰，从而也能由基本数据类型构造出复合类型来。
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-79.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-80.png)
+
+## 指针，常量和类型别名
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-81.png)
+
+# auto 类型说明符
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-82-1.png)
+
+此处编译器将根据 val1 和 val2 相加的结果来推断 item 的类型。如果 val1 和 val2 这两个变量的类型是 double，则 item 的类型就是 double，以此类推。
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-82-2.png)
+
+## 复合类型，常量和 auto
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-83.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-84.png)
+
+其次，auto 一般会忽略掉顶层 const，同时底层 const 则会保留下来，比如当初始值是一个指向常量的指针时：
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-85.png)
+
+# decltype 类型指示符
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-86.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-87.png)
+
+## decltype 和引用
+
+如果 decltype 使用的表达式不是一个变量，则 decltype 返回表达式结果对应的类型。有些表达式将向 decltype 返回一个引用类型。一般来说当这种情况发生时，意味着该表达式的结果对象能作为一条赋值语句的左值：
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-88.png)
+
 # 参考链接
 
 [来自官方手册](https://zh.cppreference.com/w/首页)
