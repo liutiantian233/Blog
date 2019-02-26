@@ -1,8 +1,8 @@
-# 自定义数据结构
-
-![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/sixth-week-1.png)
+# 写在前面
 
 这是基于C++ Primer的第六周笔记，主要内容为C++的头文件和Vector。包括自定义数据结构，函数基础和标准库类型的Vector。详细请见C++ Primer的2.6节，6.1节和3.3节。
+
+# 自定义数据结构
 
 ![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/sixth-week-2.png)
 
