@@ -1,8 +1,8 @@
-# 简单语句
-
-![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/second-week-1.jpg)
+# 基于C++ Primer的第二周笔记
 
 这是基于C++ Primer的第二周笔记，主要内容为C++的控制语句。包括简单语句，条件语句，迭代语句和跳转语句。详细请见C++ Primer的5.1节至5.5节，跳过5.4.3节。
+
+# 简单语句
 
 通常情况下，语句都是按顺序执行，但除非是最简单的程序，不然仅仅执行顺序语句对于程序是远远不够的。所以C++语言提供了一组**控制流**（flow-of-control）语句以支持复杂的语句。
 
