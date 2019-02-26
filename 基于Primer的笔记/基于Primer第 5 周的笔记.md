@@ -4,8 +4,6 @@
 
 这是基于C++ Primer的第五周笔记，主要内容为C++的函数模版和输出输入的基本标准库。包括函数重载，特殊用途的语言特性，函数模版，IO 类和文件的输入输出。详细请见C++ Primer的6.4节至6.5节，8.1节至8.2节和16.1.1节。
 
-<!-- more -->
-
 如果同一作用域内的几个函数名字相同但形参列表不同，我们称之为**重载（overloaded）函数**。
 
 ![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-2.png)
