@@ -374,7 +374,7 @@ C++11 新标准规定，函数可以返回花括号包围的值的列表。类�
 
 # 复合类型
 
-**复合类型（compound type）**是指基于其他类型定义的类型。C++语言有几种复合类型，这里将介绍两种：引用和指针。
+**复合类型**（compound type）是指基于其他类型定义的类型。C++语言有几种复合类型，这里将介绍两种：引用和指针。
 
 ![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/third-week-35.png)
 
