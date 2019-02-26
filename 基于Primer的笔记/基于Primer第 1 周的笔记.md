@@ -201,15 +201,15 @@ C++允许**分离式编译（separate compilation）**机制，该机制运行�
 
 # 表达式
 
-表达式由一个或多个**运算对象（operand）**组成，对表达式求值将得到一个**结果（result）**。字面值和变量是最简单的**表达式（expression）**。把一个**运算符（operator）**和一个或多个运算对象组合就是复杂的表达式。
+表达式由一个或多个**运算对象**（operand）组成，对表达式求值将得到一个**结果**（result）。字面值和变量是最简单的**表达式**（expression）。把一个**运算符**（operator）和一个或多个运算对象组合就是复杂的表达式。
 
 ## 基本概念
 
-C++定义了**一元运算符（unary operator）**和**二元运算符（binary operator）**。
+C++定义了**一元运算符**（unary operator）和**二元运算符**（binary operator）。
 
 ### 组合运算符和运算对象
 
-即运算对象的**求值顺序（order of evaluation）**包括**优先级（precedence）**和**结合律（associativity）**。
+即运算对象的**求值顺序**（order of evaluation）包括**优先级**（precedence）和**结合律**（associativity）。
 
 ### 运算对象转换
 
