@@ -1,8 +1,10 @@
-# 第一个`Hello World`
+# 写在前面
 
 ![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/first-week-1.jpg)
 
 这是基于C++ Primer的第一周笔记，主要内容为C++的基本语句和逻辑运算，数据类型与基础表达式。详细请见C++ Primer的1.1节至1.3节，2.1节至2.2节，4.1节至4.5节和4.11.1节。
+
+# 第一个`Hello World`
 
 都说程序员写毛笔字都是提笔就是Hello World，那么C++的第一个程序介绍也从这里开始吧！
 
