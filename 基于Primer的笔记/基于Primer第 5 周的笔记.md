@@ -166,6 +166,118 @@ const_cast 在重载函数的情景中最有用。举个例子：
 
 ![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-49.png)
 
+---
+title: 基于Primer第五周的笔记-2
+permalink: the-fifth-week-for-C++-2
+date: 2019-02-10 10:20:32
+categories:
+- 关于C++的学习手册
+tags:
+- C++的开发和进度
+---
+
+# IO 库
+
+我们的程序已经使用了很多 IO 库设施了。我们已经介绍了大部分 IO 库设施：
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-50.png)
+
+# IO 类
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-51.png)
+
+## IO 类型间的关系
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-52.png)
+
+标准库使我们能忽略这些不同类型的流之间的差异，这是通过**继承机制（inheritance）**实现的。利用模版，我们可以使用具有继承关系的类，而不必了解继承机制如何工作的细节。
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-53.png)
+
+# IO 对象无拷贝或赋值
+
+我们不能拷贝或对 IO 对象赋值：
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-54.png)
+
+由于不能拷贝 IO 对象，因此我们也不能将形参或返回类型设置为流类型。进行 IO 操作的函数通常以引用方式传递和返回流。读写一个 IO 对象会改变其状态，因此传递和返回的引用不能是 const 的。
+
+# 条件状态
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-55.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-56.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-57.png)
+
+## 查询流的状态
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-58.png)
+
+IO 库定义了一个与机器无关的 `iostate` 类型，它提供了表达流状态的完整功能。这个类型应作为一个位集合来使用。IO 库定义了 4 个 `iostate` 类型的 constexpr 值，表示特定的位模式。这些值用来表示特定类型的 IO 条件，可以与位运算符一起使用来一次性检测或设置多个标志位。
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-59.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-60.png)
+
+## 管理条件状态
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-61.png)
+
+# 管理输出缓冲
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-62.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-63.png)
+
+## 刷新输出缓冲区
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-64.png)
+
+## unitbuf 操纵符
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-65.png)
+
+## 关联输入和输出流
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-66.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-67.png)
+
+# 文件输入输出
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-68.png)
+
+# 使用文件流对象
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-69.png)
+
+## 用 fstream 代替 iostream&
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-70.png)
+
+## 成员函数 open 和 close
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-71.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-72.png)
+
+## 自动构造和析构
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-73.png)
+
+# 文件模式
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-74.png)
+
+## 以 out 模式打开文件会丢弃已有数据
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-75.png)
+
+## 每次调用 open 时都会确定文件模式
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-76.png)
+
 # 参考链接
 
 [来自官方手册](https://zh.cppreference.com/w/首页)
