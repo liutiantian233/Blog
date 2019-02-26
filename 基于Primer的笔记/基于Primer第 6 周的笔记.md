@@ -48,7 +48,7 @@
 
 # 函数基础
 
-关于C++ Primer的 6.1 函数基础部分已在第三周笔记中详细介绍。可点击[跳转链接](https://liutiantian233.github.io/about-cpp/2019/the-third-week-for-C++-1.html#函数基础)。
+关于C++ Primer的 6.1 函数基础部分已在第三周笔记中详细介绍。可点击[跳转链接](https://github.com/liutiantian233/Blog/blob/master/基于Primer的笔记/基于Primer第%203%20周的笔记.md)。
 
 # 标准库类型 vector
 
