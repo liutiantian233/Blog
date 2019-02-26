@@ -9,7 +9,7 @@
 C++的基本构造是从函数（function）开始，其中必有一个main函数，所以C++的基本模版如下：
 
 ```c++
-int main
+int main()
 {
     return 0;
 }
@@ -19,7 +19,7 @@ int main
 
 **重点：每一句结尾都得有一个 ; 这可能会经常被遗忘！**
 
-关于C++的编译和运行，详情可见[C++的最佳环境](https://liutiantian233.github.io/tech/2019/mac-cpp-environment.html)
+关于C++的编译和运行，详情可见[C++的Macbook最佳环境](https://liutiantian233.github.io/tech/2019/mac-cpp-environment.html)
 
 # C++的输入和输出
 
