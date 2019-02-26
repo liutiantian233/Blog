@@ -169,11 +169,11 @@ cout << punct_cnt << " punctuation characters in " << s << endl;
 
 要想访问 string 对象中的单个字符有两种方式：一种是使用下标，另外一种是使用迭代器。
 
-**下标运算符 [ ] **接收的输入参数是 string::size_type 类型的值，这个参数表示要访问的字符的位置，返回值是该位置上字符的引用。
+**下标运算符** [ ] 接收的输入参数是 string::size_type 类型的值，这个参数表示要访问的字符的位置，返回值是该位置上字符的引用。
 
 ![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fourth-week-37.png)
 
-下标的值称作“下标”或**“索引”**，任何表达式只要它的值是一个整型值就能作为索引。不过，如果某个索引是带符号类型的值将自动转换成由 string::size_type 表达的无符号类型。
+下标的值称作**下标**或**索引**，任何表达式只要它的值是一个整型值就能作为索引。不过，如果某个索引是带符号类型的值将自动转换成由 string::size_type 表达的无符号类型。
 
 ![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fourth-week-38.png)
 
