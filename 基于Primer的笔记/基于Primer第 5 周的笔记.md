@@ -90,7 +90,7 @@ const_cast 在重载函数的情景中最有用。举个例子：
 
 ## constexpr 函数
 
-**constexpr 函数（constexpr function）**是指能用于常量表达式的函数。定义 constexpr 函数的方法与其他函数类似，不过要遵循几项约定：函数的返回类型及所有形参的类型都得是字面值类型，而且函数体中必须有且只有一条 return 语句：
+**constexpr 函数**（constexpr function）是指能用于常量表达式的函数。定义 constexpr 函数的方法与其他函数类似，不过要遵循几项约定：函数的返回类型及所有形参的类型都得是字面值类型，而且函数体中必须有且只有一条 return 语句：
 
 ![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-26.png)
 
@@ -166,16 +166,6 @@ const_cast 在重载函数的情景中最有用。举个例子：
 
 ![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-49.png)
 
----
-title: 基于Primer第五周的笔记-2
-permalink: the-fifth-week-for-C++-2
-date: 2019-02-10 10:20:32
-categories:
-- 关于C++的学习手册
-tags:
-- C++的开发和进度
----
-
 # IO 库
 
 我们的程序已经使用了很多 IO 库设施了。我们已经介绍了大部分 IO 库设施：
@@ -190,7 +180,7 @@ tags:
 
 ![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-52.png)
 
-标准库使我们能忽略这些不同类型的流之间的差异，这是通过**继承机制（inheritance）**实现的。利用模版，我们可以使用具有继承关系的类，而不必了解继承机制如何工作的细节。
+标准库使我们能忽略这些不同类型的流之间的差异，这是通过**继承机制**（inheritance）实现的。利用模版，我们可以使用具有继承关系的类，而不必了解继承机制如何工作的细节。
 
 ![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/fifth-week-53.png)
 
