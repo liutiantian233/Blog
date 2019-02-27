@@ -170,7 +170,133 @@
 
 # 容器类型成员
 
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-55.png)
 
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-56.png)
+
+# begin 和 end 成员
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-57.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-58.png)
+
+# 容器定义和初始化
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-59.png)
+
+## 将一个容器初始化为另一个容器的拷贝
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-60.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-61.png)
+
+## 列表初始化
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-62.png)
+
+## 与顺序容器大小相关的构造函数
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-63.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-64.png)
+
+## 标准库 array 具有固定大小
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-65.png)
+
+# 赋值和 swap
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-66.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-67.png)
+
+## 使用 assign（仅顺序容器）
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-68.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-69.png)
+
+## 使用 swap
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-70.png)
+
+# 容器大小操作
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-71.png)
+
+# 关系运算符
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-72.png)
+
+## 容器的关系运算符使用元素的关系运算符完成比较
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-73.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-74.png)
+
+# 再探迭代器
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-75.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-76.png)
+
+# 插入迭代器
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-77.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-78.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-79.png)
+
+# iostream 迭代器
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-80.png)
+
+## istream_iterator 操作
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-81.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-82.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-83.png)
+
+## 使用算法操作流迭代器
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-84.png)
+
+## istream_iterator 允许使用懒惰求值
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-85.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-86.png)
+
+## ostream_iterator 操作
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-87.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-88.png)
+
+## 使用流迭代器处理类类型
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-89.png)
+
+# 反向迭代器
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-90.png)
+
+## 反向迭代器需要递减运算符
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-91.png)
+
+## 反向迭代器和其他迭代器间的关系
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-92.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-93.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-94.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/Blog/master/201902/seventh-week-95.png)
 
 # 参考链接
 
